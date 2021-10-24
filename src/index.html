@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Сайт-везитка</title>
+	<link rel="stylesheet" href="css/stileindex.css">
+	<link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
 	<header>
@@ -35,13 +37,16 @@
 	</div>
 
 	<div class="about">
-		<div class="amout_me">
-			<h2>Обо мне</h2>
-			<img src="img/trait.jpg" alt="">
+		<div class="about_me">
+			<div class="intro">
+				<h2>Обо мне</h2>
+				<img src="img/trait.jpg" alt="" class="trait_o">
+			</div>
 			<img src="img/ikon.jpg" alt="моя фотка">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, voluptate.</p>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, voluptate.</p>
-			<input type="submit" value="Скачать резюме">
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam illo blanditiis ea maiores expedita </p>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam illo blanditiis ea maiores expedita </p>
+			<input type="submit" value="Скачать резюме" class="dowload">
+			
 		</div>
 	</div>
 
@@ -54,25 +59,25 @@
 				<div class="web_skill">
 					<img src="img/notebook.png" alt="Ноутбук">
 					<h3>Веб-дизайн</h3>
-					<span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</span>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
 				</div>
 
 				<div class="working_skill">
 					<img src="img/znak.png" alt="Ноутбук">
 					<h3>Разработка</h3>
-					<span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</span>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
 				</div>
 
 				<div class="seo_skill">
 					<img src="img/rocket.png" alt="Ноутбук">
 					<h3>СЕО-Оптимизация</h3>
-					<span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</span>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
 				</div>
 
 				<div class="market_skill">
 					<img src="img/gramofon.png" alt="Ноутбук">
 					<h3>Маркетинг</h3>
-					<span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</span>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
 				</div>
 
 			</div>
@@ -81,29 +86,38 @@
 
 	<div class="case">
 		<div class="case_wrapper">
+			
 			<h2>Кейсы</h2>
-			<img src="img/trait.jpg" alt="">
+			<img src="img/trait.jpg" alt="" class="" class="trait">
+			
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nobis, quibusdam quos, distinctio non ratione excepturi!</p>
-			<div class="case_left">
-				<h2>Client</h2>
-				<h4>Какая-то компания</h4>
-				<h2>Website</h2>
-				<h4>http://www.somedomain.com</h4>
-				<input type="submit" value="VISIT LIVE SITE">
+			<img src="../src/img/case.jpg" alt="" class="case_img">
+			<div class="case_content">
+				<div class="case_left">
+					<h3>Client</h3>
+					<span>Какая-то компания</span>
+					<h4>Website</h4>
+					<span>http://www.somedomain.com <br></span>
+					<input type="submit" value="VISIT LIVE SITE" class="visit_button">
+				</div>
+				
+				<div class="case_right">
+					<h3>Название проекта</h3>
+					<span>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Omnis error aliquam, numquam beatae ullam recusandae ea, voluptate corporis ratione excepturi similique neque voluptatem ut, doloribus culpa molestiae voluptates, consequatur enim.</span>
+				</div>
+				
 			</div>
-			<div class="case_right">
-				<h2>Название проекта</h2>
-				<span>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Omnis error aliquam, numquam beatae ullam recusandae ea, voluptate corporis ratione excepturi similique neque voluptatem ut, doloribus culpa molestiae voluptates, consequatur enim.</span>
-			</div>
+			
 		</div>
 	</div>
 
 	<div class="calculator">
 		<div class="calculator_wrapper">
-			<h2>Расчёт стоимости</h2>
+			<h3>Расчёт стоимости</h3>
 			<div class="type">
 				<h2>Тип сайта</h2>
 				<select name="type" id="type">
+					<option>Выберите пункт...</option>
 					<option value="opt1"></option>
 					<option value="opt1"></option>
 				</select>
@@ -112,6 +126,7 @@
 			<div class="style">
 				<h2>ДИЗАЙН</h2>
 				<select name="type" id="type">
+					<option>Выберите пункт...</option>
 					<option value="opt1"></option>
 					<option value="opt1"></option>
 				</select>
@@ -120,21 +135,22 @@
 			<div class="adaptability">
 				<h2>АДАПТИВНОСТЬ</h2>
 				<select name="type" id="type"> 
+					<option>Выберите пункт...</option>
 					<option value="opt1"></option>
 					<option value="opt1"></option>
 				</select>
 			</div>
 
-			<img src="img/trait_f" alt="">
+			<img src="img/trait_f.jpg" alt="" class="trait_g">
 
 			<div class="date">
 				<h4>Сроки</h4>
-				<h4>0</h4>
+				<p>0</p>
 			</div>
 
 			<div class="cash">
 				<h4>Стоимость</h4>
-				<h4>0</h4>
+				<p>0</p>
 			</div>
 
 		</div>
@@ -142,9 +158,9 @@
 
 	<div class="statistics">
 		<div class="statistics_wrapper">
-			<h4>Немного статистики</h4>
+			<h3>Немного статистики</h3>
 			<img src="img/trait.jpg" alt="">
-			
+			<div class="all_stat">
 			<div class="clients">
 				<img src="img/smile.png" alt="">
 				<h2>120</h2>
@@ -168,7 +184,7 @@
 				<h2>23</h2>
 				<h4>Наград получено</h4>
 			</div>
-
+		    </div>
 		</div>
 	</div>
 
@@ -176,11 +192,13 @@
 		<div class="reviews_wrapper">
 			<h2>ОТЗЫВЫ</h2>
 			<img src="img/trait.jpg" alt="">
-			<img src="img/photo.jpg" alt="">
+			<br>
+			<img src="img/photo.jpg" alt="" class="photoimg">
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam debitis vero corrupti dignissimos aspernatur molestias repellat, temporibus mollitia, ratione voluptatibus.</p>
-			<span>Михаил, Ген директор ПАО “Газпром”.</span>
+			<span class="miha">Михаил,</span> <span>Ген директор ПАО “Газпром”.</span>
 			<div class="net">
 				<img src="img/neto.jpg" alt="">
+				<img src="img/netg.jpg" alt="" class="net_g">
 				<img src="img/netg.jpg" alt="">
 			</div>
 		</div>
@@ -190,54 +208,49 @@
 		<div class="my_contact">
 			<h2>МОИ КОНТАКТЫ</h2>
 			<img src="img/trait.jpg" alt="">
-			<span>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Voluptatem, ipsa?</span>
+			<br>
+			<p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Voluptatem, ipsa?</p>
 			<div class="all_contact">
 				<div class="geo">
-				<img src="img/geo.png"alt="">
-				<span>Санкт-Петербург <br>Невский проспект 11</span>
+					<img src="img/geo.png"alt="">
+					<p>Санкт-Петербург <br>Невский проспект 11</p>
 				</div>
 
 				<div class="wrapper">
 					<img src="img/wrapper.png" alt="">
-					<span>info@companyname.com</span>
+					<p>info@companyname.com</p>
 				</div>
 
 				<div class="phone">
 					<img src="img/phone.png" alt="">
-					<span>+7 999 999-99-99</span>
+					<p>+7 999 999-99-99</p>
 				</div>
 			</div>
-
+			<h3>ОСТАВТЕ МНЕ СООБЩЕНИЕ</h3>
 			<form action="">
-				<input type="text" placeholder="Имя">
-				<input type="email" placeholder="Email">
-				<textarea name="" id="" cols="30" rows="10"></textarea>
+				<input type="text" placeholder="Имя" class="u_name">
+				<input type="email" placeholder="Email" class="u_email">
+				<br>
+				<textarea name="" id="" cols="30" rows="10" placeholder="Сообщение" class="u_text"></textarea>
 			</form>
-			<input type="submit" value="Отправить">
+			<input type="submit" value="Отправить" class="c_button">
 
-			<div class="all_png">
-				<img src="img/fb.png" alt="">
-				<img src="img/twit.png" alt="">
-				<img src="img/ball.png" alt="">
-				<img src="img/cat.png" alt="">
-				<img src="img/inst.png" alt="">
-				<img src="img/in.png" alt="">
-			</div>
-
+			
 		</div>
 	</div>
 
 	<div class="map">
 		<div class="map_wrapper">
-			<img src="img/map.jpg" alt="">
+			<img src="../src/img/im_here.png" alt="" class="herepng">
+			<h2>I'M HERE</h2>
 		</div>
 	</div>
 
 	<footer>
-		<div class="fotter_text">
-			Copyright © 2021 Андрей Браун. Design by Web
-		</div>
-	</footer>
+		
+		<h2>Copyright © 2021 Андрей Браун. Design by Web</h2>
+		
+	</footer>			
 
 </body>
 </html>
