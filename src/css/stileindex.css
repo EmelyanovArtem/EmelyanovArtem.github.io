@@ -75,6 +75,12 @@ nav{
     font-size: 13px;
     padding: 0px 16px;
     margin: 50px 14px 0px 14px;
+    cursor: pointer;
+}
+
+.title_container input:hover{
+    background-color:#6d7682 ;
+    color: white;
 }
 
 .about{
@@ -124,6 +130,12 @@ nav{
     background-position: 10px;
     padding: 0px 14px 0px 34px;
     margin-bottom: 98px;
+    cursor: pointer;
+}
+
+.dowload:hover{
+    background-color: #6f707e;
+    color:white;
 }
 
 /*------------------*/
@@ -285,6 +297,11 @@ nav{
     line-height: 22px;
     border-radius: 5px;
     color: #fff;
+    cursor: pointer;
+}
+
+.visit_button:hover{
+    background-color: #369e95;
 }
 
 .case_right span{
@@ -343,6 +360,11 @@ nav{
     font-size:17px ;
     padding-left: 25px;
     padding-right: 10px;
+    cursor: pointer;
+}
+
+.type select:hover{
+    background-color: #dbdbdb;
 }
 
 .style{
@@ -367,6 +389,11 @@ nav{
     font-size:17px ;
     padding-left: 25px;
     padding-right: 10px;
+    cursor: pointer;
+}
+
+.style select:hover{
+    background-color: #dbdbdb;
 }
 
 .adaptability{
@@ -391,6 +418,11 @@ nav{
     font-size:17px ;
     padding-left: 25px;
     padding-right: 10px;
+    cursor: pointer;
+}
+
+.adaptability select:hover{
+    background-color: #dbdbdb;
 }
 
 .trait_g{
@@ -687,7 +719,13 @@ color:#525965;
     border-radius: 5px;
     margin-top: 28px;
     line-height: 42px;
+    cursor: pointer;
 }
+
+.c_button:hover{
+    background-color: rgb(83, 143, 83);
+}
+
 /*--------------------------*/
 
 .map_wrapper{
