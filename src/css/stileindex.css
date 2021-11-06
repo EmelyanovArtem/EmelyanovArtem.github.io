@@ -1,12 +1,16 @@
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 nav{
+    top: 0;
+    left: 0;
     width: 100%;
     height: 60px;
     background: #344051;
     position: fixed;
+    z-index: 2;
 }
 
 .logo{
@@ -14,19 +18,16 @@ nav{
     float: left;
     color: #fff;
     font-size: 28px;
-    padding-left: 388px;
 }
 
 .menu{
-    float: left;
-    padding-left: 432px;
-    
+    float: left; 
 }
 
 .menu li{
     float: left;
     line-height: 60px;
-    font-size: 16px;
+    font-size: 14px;
     color:white;
     text-transform: uppercase;
     margin-right: 40px;
@@ -52,10 +53,12 @@ nav{
     padding:432px 0px 0px 404px;
     color:#2c384a;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .title_container h1{
-    font-size: 60px;
+    font-size: 72px;
     font-weight: bold;
 }
 
@@ -83,6 +86,57 @@ nav{
     color: white;
 }
 
+.dropdown{
+    display: none;
+}
+
+@media(max-width:575px){
+    .logo{
+        position: absolute;
+        font-size: 20px;
+    }
+    .dropdown{
+        width: 150px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-bottom: 50px;
+        margin-left: 50%;
+    }
+}
+
+@media(max-width:991px){
+
+    .dropdown{
+        display: flex;
+        margin-top: 15px;
+        
+    }
+
+    
+
+    .title_container, .title_container h4, .title_container input{
+        color: white;
+    }
+
+    .main{
+        position: relative;
+    }
+
+    .main::after{
+        content: "";
+        top:0;
+        left:0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        background-color: rgba(1, 1, 1, 0.4);
+    }
+}
+
+
+
+/*------------------------------------------*/
 .about{
     width: 100%;
     height: 718px;
@@ -110,7 +164,7 @@ nav{
 }
 
 .about_me p{
-    padding: 28px 0px 28px 0px;
+    padding: 46px 0px 0px 0px;
     font-size: 18px;
     color: #3f495a;
     width: 700px;
@@ -119,7 +173,7 @@ nav{
 }
 
 .dowload{
-    margin-top: 12px;
+    
     border: 2px solid #6f707e;
     line-height: 32px;
     font-size: 17px;
@@ -138,10 +192,24 @@ nav{
     color:white;
 }
 
+@media(max-width:700px){
+    .about_me p{
+        font-size: 16px;
+        width: 500px;
+    }
+}
+
+@media(max-width:465px){
+    .about_me p{
+        font-size: 14px;
+        width: 325px;
+    }
+}
+
 /*------------------*/
 
 .skills{
-    background-image: url(../img/bg2.jpg) ;
+    background: center url(../img/bg2.jpg) ;
     width: 100%;
     height: 522px;
     text-align: center;
@@ -155,14 +223,15 @@ nav{
     font-size: 33px;
     text-transform: uppercase;
     color:#263244;
-    padding-top:109px;
-    padding-bottom: 32px;
+    padding-top:60px;
+    padding-bottom: 15px;
     font-weight: bold;
 }
 
 .skills_container{
     padding-top: 103px;
     display: flex;
+    justify-content: space-around;
 }
 
 .web_skill h3{
@@ -174,7 +243,7 @@ nav{
 }
 
 .web_skill p{
-    width: 220px;
+    
     font-size: 16px;
     color:#515a68;
 }
@@ -188,7 +257,7 @@ nav{
 }
 
 .working_skill p{
-    width: 220px;
+    
     font-size: 16px;
     color:#515a68;
 }
@@ -202,7 +271,7 @@ nav{
 }
 
 .seo_skill p{
-    width: 220px;
+    
     font-size: 16px;
     color:#515a68;
 }
@@ -216,22 +285,103 @@ nav{
 }
 
 .market_skill p{
-    width: 220px;
+    
     font-size: 16px;
     color:#515a68;
 }
 
-.web_skill{
-    margin-left: 365px;
-    padding-right: 85px;
+
+@media(max-width:1200px){
+    .seo_skill h3{
+        font-size: 16px;
+    }
+    .seo_skill p{
+        width: 170px;
+        font-size: 12px;
+        
+    }
+
+    .market_skill h3{
+        font-size: 16px;
+    }
+    .market_skill p{
+        width: 170px;
+        font-size: 12px;
+        
+    }
+
+    .web_skill h3{
+        font-size: 16px;
+    }
+    .web_skill p{
+        width: 170px;
+        font-size: 12px;
+        
+    }
+
+    .working_skill h3{
+        font-size: 16px;
+    }
+    .working_skill p{
+        width: 170px;
+        font-size: 12px;
+        
+    }
 }
 
-.working_skill{
-    padding-right: 85px;
-}
+@media(max-width:991px){
 
-.seo_skill{
-    padding-right: 85px;
+    .seo_skill img{
+        width: 25px;
+    }
+
+    .seo_skill h3{
+        font-size: 13px;
+    }
+    .seo_skill p{
+        width: 150px;
+        font-size: 10px;
+        
+    }
+
+    .market_skill img{
+        width: 25px;
+    }
+
+    .market_skill h3{
+        font-size: 13px;
+    }
+    .market_skill p{
+        width: 150px;
+        font-size: 10px;
+        
+    }
+
+    .web_skill img{
+        width: 25px;
+    }
+
+    .web_skill h3{
+        font-size: 13px;
+    }
+    .web_skill p{
+        width: 150px;
+        font-size: 10px;
+        
+    }
+
+    .working_skill img{
+        width: 25px;
+    }
+
+    .working_skill h3{
+        font-size: 13px;
+    }
+    .working_skill p{
+        width: 150px;
+        font-size: 10px;
+        
+    }
 }
 
 /*------------------------*/
@@ -323,14 +473,33 @@ nav{
     width: 850px;
 }
 
+@media(max-width:991px){
+    .case_content span{
+        font-size: 14px;
+    }
+
+    .case_right span{
+        width: 300px;
+    }
+}
+
+@media(max-width:575px){
+    .case_img{
+        width: 350px;
+    }
+}
+
 /*------------------------*/
 
 .calculator_wrapper{
     background-color: #fff;
-    text-align: center;
+    box-shadow: 1px 1px 20px gray;
+    margin-bottom: 40px;
+    padding: 0px 20px;
 }
 
 .calculator_wrapper h3{
+    text-align: center;
     margin-top: 200px;
     font-size: 46px;
     color:#1c2534;
@@ -339,12 +508,10 @@ nav{
     padding-bottom: 60px;
 }
 
-.type{
-    text-align: left;
-    margin-left: 500px;
-}
+
 
 .type h2{
+    text-align: left;
     font-size: 29px;
     color: #1c2534;
     text-transform: uppercase;
@@ -353,7 +520,7 @@ nav{
 
 .type select{
     margin-top: 20px;
-    width: 865px;
+    
     height: 60px;
     background-color: #eeeeee;
     color:#737373;
@@ -367,10 +534,7 @@ nav{
     background-color: #dbdbdb;
 }
 
-.style{
-    text-align: left;
-    margin-left: 500px;
-}
+
 
 .style h2{
     padding-top: 45px;
@@ -382,7 +546,7 @@ nav{
 
 .style select{
     margin-top: 20px;
-    width: 865px;
+    
     height: 60px;
     background-color: #eeeeee;
     color:#737373;
@@ -396,10 +560,7 @@ nav{
     background-color: #dbdbdb;
 }
 
-.adaptability{
-    text-align: left;
-    margin-left: 500px;
-}
+
 
 .adaptability h2{
     padding-top: 45px;
@@ -411,7 +572,7 @@ nav{
 
 .adaptability select{
     margin-top: 20px;
-    width: 865px;
+   
     height: 60px;
     background-color: #eeeeee;
     color:#737373;
@@ -434,11 +595,11 @@ nav{
 .date{
     padding-top: 23px;
     display: flex;
-    margin-left: 500px;
+    
 }
 
 .date p{
-    padding-left:799px ;
+    
     font-size: 21px;
     color: #1c2534;
     font-weight: bold;
@@ -453,11 +614,11 @@ nav{
 .cash{
     padding-top: 23px;
     display: flex;
-    margin-left: 500px;
+    
 }
 
 .cash p{
-    padding-left:750px ;
+    
     font-size: 21px;
     color: #1c2534;
     font-weight: bold;
@@ -470,6 +631,90 @@ nav{
     color: #1c2534;
 }
 
+.calculator_button{
+    width: 200px;
+    height: 44px;
+    background-color: #63b5ae;
+    font-size: 18px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-bottom: 35px;
+}
+
+@media(max-width:767px){
+    .calculator_button{
+        width: 150px;
+        margin-left: 38%;
+    }
+}
+
+@media(max-width:575px){
+    .calculator_wrapper{
+        width: 100%;
+    }
+
+    .trait_g{
+        width: 100%;
+    }
+
+    .style select{
+        width: 100%;
+    }
+
+    .type select{
+        width: 100%;
+    }
+
+    .adaptability select{
+        width: 100%;
+    }
+
+    .date p{
+        margin-left: 85%;
+    }
+
+    .cash p{
+        margin-left: 76%;
+    }
+}
+
+@media(max-width:1199px){
+   .calculator_wrapper h3{
+        font-size:28px ;
+   }
+   
+    .cash h4{
+        font-size: 18px;
+    }
+
+    .date h4{
+        font-size: 18px;
+    }
+
+    .cash p{
+        font-size: 18px;
+    }
+
+    .date p{
+        font-size: 18px;
+    }
+
+    .type h2{
+        font-size:21px ;
+    }
+
+    .style h2{
+        font-size:21px ;
+    }
+
+    .adaptability h2{
+        font-size:21px ;
+    }
+}
 /*------------------------*/
 
 .statistics{
@@ -493,12 +738,10 @@ nav{
 .all_stat{
     padding-top: 90px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.clients{
-    padding-right: 80px;
-}
+
 
 .clients h2{
     padding-top: 30px;
@@ -514,10 +757,7 @@ nav{
     letter-spacing: 0.01px;
 }
 
-.hourse{
-    padding-right: 80px;
-    padding-left: 80px;
-}
+
 
 .hourse h2{
     padding-top: 30px;
@@ -533,10 +773,6 @@ nav{
     letter-spacing: 0.01px;
 }
 
-.projects{
-    padding-right: 80px;
-    padding-left: 80px;
-}
 
 .projects h2{
     padding-top: 30px;
@@ -552,9 +788,7 @@ nav{
     letter-spacing: 0.01px;
 }
 
-.rewerd{
-    padding-left: 80px;
-}
+
 
 .rewerd h2{
     padding-top: 30px;
@@ -568,6 +802,106 @@ nav{
     color:#323e4f;
     font-size: 20px;
     letter-spacing: 0.01px;
+}
+
+@media(max-width:1400px){
+    .rewerd h2{ 
+        font-size: 30px;
+    }
+    
+    .rewerd h4{
+        font-size: 15px;  
+    }
+
+    .rewerd img{
+        width: 50px;
+    }
+
+    .projects h2{ 
+        font-size: 30px;
+    }
+    
+    .projects h4{
+        font-size: 15px;  
+    }
+
+    .projects img{
+        width: 50px;
+    }
+
+    .hourse h2{ 
+        font-size: 30px;
+    }
+    
+    .hourse h4{
+        font-size: 15px;  
+    }
+
+    .hourse img{
+        width: 50px;
+    }
+
+    .clients h2{ 
+        font-size: 30px;
+    }
+    
+    .clients h4{
+        font-size: 15px;  
+    }
+
+    .clients img{
+        width: 50px;
+    }
+}
+
+@media(max-width:768px){
+    .rewerd h2{ 
+        font-size: 22px;
+    }
+    
+    .rewerd h4{
+        font-size: 13px;  
+    }
+
+    .rewerd img{
+        width: 30px;
+    }
+
+    .projects h2{ 
+        font-size: 22px;
+    }
+    
+    .projects h4{
+        font-size: 13px; 
+    }
+
+    .projects img{
+        width: 30px;
+    }
+
+    .hourse h2{ 
+        font-size: 22px;
+    }
+    
+    .hourse h4{
+        font-size: 13px; 
+    }
+
+    .hourse img{
+        width: 30px;
+    }
+
+    .clients h2{ 
+        font-size: 22px;
+    }
+    
+    .clients h4{
+        font-size: 13px; 
+    }
+
+    .clients img{
+        width: 30px;
+    }
 }
 
 /*------------------------*/
@@ -597,14 +931,14 @@ nav{
 .reviews_wrapper p{
     font-size: 17px;
     color:#3d4654;
-    width: 700px;
+    width: 36.5%;
     margin: 0px auto;
     padding-bottom: 35px;
 }
 
 .reviews_wrapper span{
-font-size: 17px;
-color:#525965;
+    font-size: 17px;
+    color:#525965;
 }
 
 
@@ -615,11 +949,50 @@ color:#525965;
 }
 
 .net{
-    padding: 48px 0px 90px 0px;
+    padding: 1% 0px 90px 0px;
 }
 
 .net_g{
     padding: 0px 6px 0px 6px;
+}
+
+@media(max-width:991px){
+    .reviews_wrapper p{
+        font-size: 14px;
+        padding: 0;
+        
+    }
+
+    .reviews_wrapper span{
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+@media(max-width:575px){
+    .reviews_wrapper p{
+        font-size: 11px;
+    }
+}
+
+@media (max-width:380px){
+    .reviews_wrapper p{
+        font-size: 12px;
+        padding: 0;
+        width: 200px;
+    }
+
+    .reviews_wrapper span{
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .net{
+        padding: 0px 0px 90px 0px;
+    }
 }
 
 /*------------------------*/
@@ -633,12 +1006,16 @@ color:#525965;
 .contact{
     width: 100%;
     height: 808px;
-    background-image: url(../img/bg4.jpg);
+    background: center  url(../img/bg4.jpg);
     text-align: center;
+    background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    -webkit-background-size: cover;
 }
 
 .my_contact h2{
-    padding-top: 105px;
+    padding-top: 80px;
     font-size: 33px;
     text-transform: uppercase;
     font-weight: bold;
@@ -647,28 +1024,28 @@ color:#525965;
 }
 
 .my_contact p{
-    padding-top: 32px;
+    padding-top: 28px;
     color:white;
     font-size: 17px;
-    margin: 0px auto;
+    
 }
 
 .all_contact{
-    padding-top: 48px;
+    padding-top: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    
 }
 
 .all_contact p{
-    padding-top: 17px;
-    padding: 0px 50px;
+    width: 270px;
     color:white;
-    font-size: 17px;
-    margin: 0px auto;
+    font-size: 17px; 
+    
 }
 
 .my_contact h3{
-    padding-top: 55px;
+    padding-top: 35px;
     font-size: 21px;
     text-transform: uppercase;
     font-weight: bold;
@@ -676,32 +1053,31 @@ color:#525965;
     padding-bottom: 32px;
 }
 
-
 .u_name{
-    width: 340px;
+    
     height: 35px;
-    color:#d2d6dc;
+    color:#5d5d5e;
     opacity: 0.85;
     padding-left: 15px;
-    margin-right: 15px;
+    
     font-size: 17px;
 }
 
 .u_email{
-    width: 340px;
+    
     height: 35px;
-    color:#d2d6dc;
+    color:#5d5d5e;
     opacity: 0.85;
     padding-left: 15px;
-    margin-left: 15px;
+   
     font-size: 17px;
 }
 
 .u_text{
     margin-top: 14px;
-    width: 717px;
+    
     height: 94px;
-    color:#d2d6dc;
+    color:#5d5d5e;
     opacity: 0.85;
     padding-left: 15px;
     font-size: 17px;
@@ -726,6 +1102,46 @@ color:#525965;
     background-color: rgb(83, 143, 83);
 }
 
+@media(max-width:1199px){
+    .all_contact p{
+        width: 230px;
+        color:white;
+        font-size: 14px; 
+        
+    }
+
+    .my_contact h3{
+        padding-top: 30px;
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width:991px){
+    .all_contact p{
+        
+        width: 140px;
+        color:white;
+        font-size: 12px; 
+        
+    }
+    
+    .c_button{
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width:575px){
+    form input{
+        width: 150px;
+    }
+    form textarea{
+        width: 300px;
+    }
+}
+
 /*--------------------------*/
 
 .map_wrapper{
@@ -733,7 +1149,7 @@ color:#525965;
     width: 100%;
     height: 356px;
     text-align: center;
-    background-image: url(../img/map.jpg);
+    background: center url(../img/map.jpg);
 }
 
 .herepng{

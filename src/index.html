@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/stileindex.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
 
@@ -15,29 +16,60 @@
 
 	<header>
 		<nav>
-			<div class="logo wow bounceInDown">
-				Андрей Браун
+			<div class="container">
+				<div class="row">
+					<div class="col-xxl-2 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+						<div class="logo wow bounceInDown">
+							Андрей Браун
+						</div>
+					</div>
+					<div class="col-xxl-6 offset-xxl-4 col-xl-7 offset-xl-2 col-lg-8 offset-lg-1 d-none d-lg-block">
+						<div class="menu">
+							<ul>
+								<a href=""><li class="wow fadeInLeft" data-wow-delay="0.5s">Обо мне</li></a>
+								<a href=""><li class="wow fadeInLeft" data-wow-delay="1s">Услуги</li></a>
+								<a href=""><li class="wow fadeInLeft" data-wow-delay="1.5s">Кейсы</li></a>
+								<a href=""><li class="wow fadeInLeft" data-wow-delay="2s">Прайс</li></a>
+								<a href=""><li class="wow fadeInLeft" data-wow-delay="2.5s">Отзывы</li></a>
+								<a href=""><li class="wow fadeInLeft" data-wow-delay="3s">Контакты</li></a>
+
+							</ul>
+						</div>
+						
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							  Навигация
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							  <li><a class="dropdown-item" href="#">Обо мне</a></li>
+							  <li><a class="dropdown-item" href="#">Услуги</a></li>
+							  <li><a class="dropdown-item" href="#">Кейсы</a></li>
+							  <li><a class="dropdown-item" href="#">Прайс</a></li>
+							  <li><a class="dropdown-item" href="#">Отзывы</a></li>
+							  <li><a class="dropdown-item" href="#">Контакты</a></li>
+							</ul>
+						  </div>
+						</div>
 			</div>
-			<div class="menu">
-				<ul>
-					<a href=""><li class="wow fadeInLeft" data-wow-delay="0.5s">Обо мне</li></a>
-					<a href=""><li class="wow fadeInLeft" data-wow-delay="1s">Услуги</li></a>
-					<a href=""><li class="wow fadeInLeft" data-wow-delay="1.5s">Кейсы</li></a>
-					<a href=""><li class="wow fadeInLeft" data-wow-delay="2s">Прайс</li></a>
-					<a href=""><li class="wow fadeInLeft" data-wow-delay="2.5s">Отзывы</li></a>
-					<a href=""><li class="wow fadeInLeft" data-wow-delay="3s">Контакты</li></a>
-				</ul>
-			</div>
+		</div>
+			
 		</nav>
 	</header>
 
 	<section class="main">
-		<div class="title_container">
-			<h1 class="wow fadeInDown">Привет<br>Я Андрей Браун</h1>
-			<h4 class="wow fadeInUp">Фулл стек веб-разработчик</h4>
-			<input type="submit" value="Обо мне" class="wow fadeInLeft" data-wow-delay="4s">
-			<input type="submit" value="Мои работы" class="wow fadeInRight" data-wow-delay="4s">
+		<div class="container h-100">
+			<div class="row h-100 align-items-center mt-5 pt-5 md-justify-content-center lg-justify-content-center">
+				<div class="title_container col-xxl-6 col-xl-7 col-lg-8 col-md-10 col-sm-10 py-0 my-0 mt-5 pt-5">
+					<h1 class="wow fadeInDown">Привет<br>Я Андрей Браун</h1>
+					<h4 class="wow fadeInUp">Фулл стек веб-разработчик</h4>
+					<input type="submit" value="Обо мне" class="wow fadeInLeft" data-wow-delay="4s">
+					<input type="submit" value="Мои работы" class="wow fadeInRight" data-wow-delay="4s">
+				</div>
 		</div>
+	</div>
+		
 	</section>
 
 	<section class="about">
@@ -54,143 +86,165 @@
 		</div>
 	</section>
 
-	<section class="skills">
-		<div class="my_skills">
-			<h2 class="wow slideInDown">Что я умею</h2>
-			<img src="img/trait.jpg" alt="">
-			<div class="skills_container">
-
-				<div class="web_skill wow slideInUp">
-					<img src="img/notebook.png" alt="Ноутбук">
-					<h3>Веб-дизайн</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
+	
+			<section class="skills">
+				<div class="my_skills">
+					<h2 class="wow slideInDown">Что я умею</h2>
+					<img src="img/trait.jpg" alt="">
+						<div class="container">
+							<div class="row">
+					<div class="skills_container col-12">
+		
+						<div class="web_skill wow slideInUp">
+							<img src="img/notebook.png" alt="Ноутбук">
+							<h3>Веб-дизайн</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
+						</div>
+		
+						<div class="working_skill wow slideInUp">
+							<img src="img/znak.png" alt="Ноутбук">
+							<h3>Разработка</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
+						</div>
+		
+						<div class="seo_skill wow slideInUp">
+							<img src="img/rocket.png" alt="Ноутбук">
+							<h3>СЕО-Оптимизация</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
+						</div>
+		
+						<div class="market_skill wow slideInUp">
+							<img src="img/gramofon.png" alt="Ноутбук">
+							<h3>Маркетинг</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
+						</div>
+					   </div>
+					</div>
+					</div>
 				</div>
-
-				<div class="working_skill wow slideInUp">
-					<img src="img/znak.png" alt="Ноутбук">
-					<h3>Разработка</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
-				</div>
-
-				<div class="seo_skill wow slideInUp">
-					<img src="img/rocket.png" alt="Ноутбук">
-					<h3>СЕО-Оптимизация</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
-				</div>
-
-				<div class="market_skill wow slideInUp">
-					<img src="img/gramofon.png" alt="Ноутбук">
-					<h3>Маркетинг</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione sunt, veniam omnis quae dolor temporibus.</p>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-	<section class="case">
-		<div class="case_wrapper">
-			
-			<h2 class="wow slideInDown">Кейсы</h2>
-			<img src="img/trait.jpg" alt="" class="" class="trait">
-			
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nobis, quibusdam quos, distinctio non ratione excepturi!</p>
-			<img src="../src/img/case.jpg" alt="" class="case_img wow zoomIn">
-			<div class="case_content">
-				<div class="case_left wow slideInLeft">
-					<h3>Client</h3>
-					<span>Какая-то компания</span>
-					<h4>Website</h4>
-					<span>http://www.somedomain.com <br></span>
-					<input type="submit" value="VISIT LIVE SITE" class="visit_button">
+			</section>
+		
+	
+	
+<div class="container">
+	<div class="row">
+		<section class="case">
+			<div class="case_wrapper">
+				
+				<h2 class="wow slideInDown">Кейсы</h2>
+				<img src="img/trait.jpg" alt="" class="" class="trait">
+				
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nobis, quibusdam quos, distinctio non ratione excepturi!</p>
+				<img src="../src/img/case.jpg" alt="" class="case_img wow zoomIn col-xxl-12 col-xl-11 col-lg-9 col-md-9 col-sm-9">
+				<div class="case_content ">
+					<div class="case_left wow slideInLeft">
+						<h3>Client</h3>
+						<span>Какая-то компания</span>
+						<h4>Website</h4>
+						<span>http://www.somedomain.com <br></span>
+						<input type="submit" value="VISIT LIVE SITE" class="visit_button">
+					</div>
+					
+					<div class="case_right wow slideInRight">
+						<h3>Название проекта</h3>
+						<span class="col-xxl-12 col-xl-11 col-lg-9 col-md-9 col-sm-9">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Omnis error aliquam, numquam beatae ullam recusandae ea, voluptate corporis ratione excepturi similique neque voluptatem ut, doloribus culpa molestiae voluptates, consequatur enim.</span>
+					</div>
+					
 				</div>
 				
-				<div class="case_right wow slideInRight">
-					<h3>Название проекта</h3>
-					<span>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Omnis error aliquam, numquam beatae ullam recusandae ea, voluptate corporis ratione excepturi similique neque voluptatem ut, doloribus culpa molestiae voluptates, consequatur enim.</span>
+			</div>
+		</section>
+	</div>
+</div>
+	
+<div class="container">
+	<div class="row">
+		<section class="calculator">
+			<div class="calculator_wrapper">
+				<h3>Расчёт стоимости</h3>
+				<div class="type">
+					<h2 class="offset-xxl-1 col-xxl-2 offset-xl-1 col-xl-2 offset-lg-1 col-lg-3 col-md-3 col-sm-3">Тип сайта</h2>
+					<select class="offset-xxl-1 col-xxl-10 offset-xl-1 col-xl-9 offset-lg-1 col-lg-10 col-md-12 col-sm-12" name="type" id="type">
+						<option>Выберите пункт...</option>
+						<option value="opt1"></option>
+						<option value="opt1"></option>
+					</select>
 				</div>
-				
+	
+				<div class="style">
+					<h2 class="offset-xxl-1 col-xxl-2 offset-xl-1 col-xl-2 offset-lg-1 col-lg-3 col-md-3 col-sm-3">ДИЗАЙН</h2>
+					<select class="offset-xxl-1 col-xxl-10 offset-xl-1 col-xl-9 offset-lg-1 col-lg-10 col-md-12 col-sm-12"name="type" id="type">
+						<option>Выберите пункт...</option>
+						<option value="opt1"></option>
+						<option value="opt1"></option>
+					</select>
+				</div>
+	
+				<div class="adaptability">
+					<h2 class="offset-xxl-1 col-xxl-2 offset-xl-1 col-xl-2 offset-lg-1 col-lg-3 col-md-3 col-sm-3">АДАПТИВНОСТЬ</h2>
+					<select class="offset-xxl-1 col-xxl-10 offset-xl-1 col-xl-9 offset-lg-1 col-lg-10 col-md-12 col-sm-12" name="type" id="type"> 
+						<option>Выберите пункт...</option>
+						<option value="opt1"></option>
+						<option value="opt1"></option>
+					</select>
+				</div>
+	
+				<img src="img/trait_f.jpg" alt="" class="trait_g offset-xxl-1 col-xxl-10 offset-xl-1 col-xl-9 offset-lg-1 col-lg-10 col-md-12 col-sm-12">
+	
+				<div class="date">
+					<h4 class="offset-xxl-1 col-xxl-2 offset-xl-1 col-xl-1 offset-lg-1 col-lg-1 col-sm-1">Сроки</h4>
+					<p class="offset-xxl-8 col-xxl-1 offset-xl-8 col-xl-1 offset-lg-9 col-lg-1 offset-md-11 col-md-1 offset-sm-11 col-sm-1">0</p>
+				</div>
+	
+				<div class="cash">
+					<h4 class="offset-xxl-1 col-xxl-2 offset-xl-1 col-xl-1 offset-lg-1 col-lg-1 col-md-2 col-sm-1">Стоимость</h4>
+					<p class="offset-xxl-8 col-xxl-1 offset-xl-8 col-xl-1 offset-lg-9 col-lg-1 offset-md-10 col-md-1 offset-sm-11 col-sm-1">0</p>
+				</div>
+				<input type="submit" value="Оставить заявку" class="calculator_button">
 			</div>
-			
+		</section>
+	
+	</div>
+</div>
+	
+
+		<section class="statistics">
+			<div class="container">
+				<div class="row">
+			<div class="statistics_wrapper col-xl-11">
+				<h3 class="wow slideInDown">Немного статистики</h3>
+				<img src="img/trait.jpg" alt="">
+				<div class="all_stat">
+				<div class="clients">
+					<img src="img/smile.png" alt="">
+					<h2>120</h2>
+					<h4>Счастливых клиентов</h4>
+				</div>
+	
+				<div class="hourse">
+					<img src="img/znak2.png" alt="">
+					<h2>4,600</h2>
+					<h4>Часов работы</h4>
+				</div>
+	
+				<div class="projects">
+					<img src="img/check_mark.png" alt="">
+					<h2>340</h2>
+					<h4>Проектов завершено</h4>
+				</div>
+	
+				<div class="rewerd">
+					<img src="img/rewerd.png" alt="">
+					<h2>23</h2>
+					<h4>Наград получено</h4>
+				</div>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
+		
+		</section>
 
-	<section class="calculator">
-		<div class="calculator_wrapper">
-			<h3>Расчёт стоимости</h3>
-			<div class="type">
-				<h2>Тип сайта</h2>
-				<select name="type" id="type">
-					<option>Выберите пункт...</option>
-					<option value="opt1"></option>
-					<option value="opt1"></option>
-				</select>
-			</div>
-
-			<div class="style">
-				<h2>ДИЗАЙН</h2>
-				<select name="type" id="type">
-					<option>Выберите пункт...</option>
-					<option value="opt1"></option>
-					<option value="opt1"></option>
-				</select>
-			</div>
-
-			<div class="adaptability">
-				<h2>АДАПТИВНОСТЬ</h2>
-				<select name="type" id="type"> 
-					<option>Выберите пункт...</option>
-					<option value="opt1"></option>
-					<option value="opt1"></option>
-				</select>
-			</div>
-
-			<img src="img/trait_f.jpg" alt="" class="trait_g">
-
-			<div class="date">
-				<h4>Сроки</h4>
-				<p>0</p>
-			</div>
-
-			<div class="cash">
-				<h4>Стоимость</h4>
-				<p>0</p>
-			</div>
-
-		</div>
-	</section>
-
-	<section class="statistics">
-		<div class="statistics_wrapper">
-			<h3 class="wow slideInDown">Немного статистики</h3>
-			<img src="img/trait.jpg" alt="">
-			<div class="all_stat">
-			<div class="clients">
-				<img src="img/smile.png" alt="">
-				<h2>120</h2>
-				<h4>Счастливых клиентов</h4>
-			</div>
-
-			<div class="hourse">
-				<img src="img/znak2.png" alt="">
-				<h2>4,600</h2>
-				<h4>Часов работы</h4>
-			</div>
-
-			<div class="projects">
-				<img src="img/check_mark.png" alt="">
-				<h2>340</h2>
-				<h4>Проектов завершено</h4>
-			</div>
-
-			<div class="rewerd">
-				<img src="img/rewerd.png" alt="">
-				<h2>23</h2>
-				<h4>Наград получено</h4>
-			</div>
-		    </div>
-		</div>
-	</section>
 
 	<section class="reviews">
 		<div class="reviews_wrapper">
@@ -209,37 +263,40 @@
 	</section>
 
 	<section class="contact">
-		<div class="my_contact">
-			<h2 class="wow slideInDown">МОИ КОНТАКТЫ</h2>
-			<img src="img/trait.jpg" alt="">
-			<br>
-			<p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Voluptatem, ipsa?</p>
-			<div class="all_contact">
-				<div class="geo">
-					<img src="img/geo.png"alt="">
-					<p>Санкт-Петербург <br>Невский проспект 11</p>
-				</div>
-
-				<div class="wrapper">
-					<img src="img/wrapper.png" alt="">
-					<p>info@companyname.com</p>
-				</div>
-
-				<div class="phone">
-					<img src="img/phone.png" alt="">
-					<p>+7 999 999-99-99</p>
-				</div>
+		<div class="container">
+			<div class="row">
+				<div class="my_contact">
+					<h2 class="wow slideInDown">МОИ КОНТАКТЫ</h2>
+					<img src="img/trait.jpg" alt="">
+					<br>
+					<p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Voluptatem, ipsa?</p>
+					<div class="all_contact">
+						<div class="geo">
+							<img src="img/geo.png"alt="">
+							<p>Санкт-Петербург <br>Невский проспект 11</p>
+						</div>
+		
+						<div class="wrapper">
+							<img src="img/wrapper.png" alt="">
+							<p>info@companyname.com</p>
+						</div>
+		
+						<div class="phone">
+							<img src="img/phone.png" alt="">
+							<p>+7 999 999-99-99</p>
+						</div>
+					</div>
+					<h3>ОСТАВТЕ МНЕ СООБЩЕНИЕ</h3>
+					<form action="" >
+						<input type="text" placeholder="Имя" class="u_name col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<input type="email" placeholder="Email" class="u_email col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
+						<br>
+						<textarea name="" id="" cols="30" rows="10" placeholder="Сообщение" class="u_text col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-8"></textarea>
+					</form>
+					<input type="submit" value="Отправить" class="c_button">
 			</div>
-			<h3>ОСТАВТЕ МНЕ СООБЩЕНИЕ</h3>
-			<form action="">
-				<input type="text" placeholder="Имя" class="u_name">
-				<input type="email" placeholder="Email" class="u_email">
-				<br>
-				<textarea name="" id="" cols="30" rows="10" placeholder="Сообщение" class="u_text"></textarea>
-			</form>
-			<input type="submit" value="Отправить" class="c_button">
-
-			
+		</div>
+	
 		</div>
 	</section>
 
@@ -261,6 +318,6 @@
 	<script>
 	new WOW().init();
 	</script>
-
+	<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
