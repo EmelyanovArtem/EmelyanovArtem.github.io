@@ -384,6 +384,141 @@ nav{
     }
 }
 
+@media(max-width:767px){
+
+    .seo_skill img{
+        width: 20px;
+    }
+
+    .seo_skill h3{
+        font-size: 13px;
+    }
+    .seo_skill p{
+        width: 100px;
+        font-size: 10px;
+        
+    }
+
+    .seo_skill{
+        padding: 0px 20px;
+    }
+
+    .market_skill img{
+        width: 20px;
+    }
+
+    .market_skill h3{
+        font-size: 11px;
+    }
+    .market_skill p{
+        width: 100px;
+        font-size: 10px;
+        
+    }
+
+    
+
+    .seo_skill img{
+        width: 20px;
+    }
+
+    .seo_skill p{
+        width: 100px;
+        font-size: 10px;
+        
+    }
+
+    .seo_skill h3{
+        font-size: 11px;
+    }
+
+    .web_skill h3{
+        font-size: 11px;
+    }
+    .web_skill p{
+        width: 100px;
+        font-size: 10px;
+        
+    }
+
+    .web_skill{
+        padding: 0px 20px;
+    }
+
+    .working_skill img{
+        width: 20px;
+    }
+
+    .working_skill h3{
+        font-size: 11px;
+    }
+    .working_skill p{
+        width: 120px;
+        font-size: 10px;
+        
+    }
+
+    .working_skill{
+        padding: 0px 20px;
+    }
+
+}
+
+@media(max-width:575px){
+    .web_skill p{
+        display: none;
+    }
+    .seo_skill p{
+        display: none;
+    }
+    .working_skill p{
+        display: none;
+    }
+    .market_skill p{
+        display: none;
+    }
+    
+    .market_skill h3{
+        padding: 0;
+        padding-top: 34px;
+        font-size: 19px;
+        color: #cf7600;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+
+    .seo_skill h3{
+        width: 150px;
+        padding: 0;
+        padding-top: 34px;
+        font-size: 15px;
+        color: #cf7600;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    .web_skill h3{
+        padding: 0;
+        width: 120px;
+        padding-top: 34px;
+        font-size: 15px;
+        color: #cf7600;
+        font-weight: bold;
+        padding-bottom: 20px;
+        
+    }
+
+    .working_skill h3{
+        padding: 0;
+        padding-top: 34px;
+        font-size: 15px;
+        color: #cf7600;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+}
+
 /*------------------------*/
 
 .case{
@@ -485,7 +620,19 @@ nav{
 
 @media(max-width:575px){
     .case_img{
-        width: 350px;
+        width: 85%;
+    }
+    .case_right{
+        
+        width: 20%;
+    }
+    .case_right h3{
+        font-size: 18px;
+        width: 10%;
+    }
+    .case_left h3, h4{
+        font-size: 18px;
+        width: 10%;
     }
 }
 
