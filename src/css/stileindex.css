@@ -13,6 +13,10 @@ nav{
     z-index: 2;
 }
 
+.active{
+    color: #cf7600!important;
+}
+
 .logo{
     line-height: 60px;
     float: left;
@@ -524,6 +528,7 @@ nav{
 .case{
     background-color: white;
     text-align: center;
+    
 }
 
 .case_wrapper h2{
@@ -745,7 +750,7 @@ nav{
     
 }
 
-.date p{
+.date input{
     
     font-size: 21px;
     color: #1c2534;
@@ -764,7 +769,7 @@ nav{
     
 }
 
-.cash p{
+.cash input{
     
     font-size: 21px;
     color: #1c2534;
@@ -790,6 +795,10 @@ nav{
     cursor: pointer;
     margin-left: 40%;
     margin-bottom: 35px;
+}
+
+.calculator_button:hover{
+    background-color: #369e95;
 }
 
 @media(max-width:767px){
@@ -864,9 +873,13 @@ nav{
 }
 /*------------------------*/
 
+.stop-scrolling{
+    height: 100%;
+    overflow:hidden ;
+}
+
 .statistics{
-    width: 100%;
-    height: 498px;
+    width: 100%;   
     background: no-repeat center url(../img/bg3.jpg);
     text-align: center;
     background-attachment: fixed;
@@ -1328,4 +1341,31 @@ footer h2{
 }
 
 /*----------*/
+
+.exitblock{
+    position: fixed;
+    top: 100px;
+    left: 30%;
+    z-index: 3;
+    text-align: center;
+    display: none;
+}
+
+.exit-wrapper{
+    width: 50%;
+    height: 130px;
+    background-color: whitesmoke;
+    border: 5px #354051 solid;
+}
+
+.mess span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #354051;
+}
+
+.mess img{
+    margin-left: 5%;
+    width: 15%
+}
 

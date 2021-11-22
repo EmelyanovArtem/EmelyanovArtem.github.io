@@ -1,109 +1,143 @@
-"use strict"
 
-let type = prompt("Какой хотите тип сайта? 1-визитка(1000руб) 2-корпоративный(2500руб) 3-интернет-магазин (6000руб)");
-let style = prompt("Какой хотите дизайн сайта? 1-классика(1500руб) 2-ретро(1200руб) 3-типографика (2500руб)");
-let adaptivity = prompt("Какую желаете адаптацию сайта? 1-строго пиксельная(1000руб) 2-под все устройства(2500руб) 3-под мобильные устройства (1500руб)");
-let finishCash;
-let finishDate;
+
+$(document).ready(function(){
+
+    "use strict"
+
+let finishCash = 0;
+let finishDate = 0;
+
 
 let calculate={
     
     cash:[
-        [1000, 2500, 6000],
-        [1500, 1200, 2500],
-        [1000, 2500, 1500],
+        [0, 1000, 2500, 6000],
+        [0, 1500, 1200, 2500],
+        [0, 1000, 2500, 1500],
     ],
     date: [
-        [2, 4, 7],
-        [4, 3, 5],
-        [2, 4, 3],  
+        [0, 2, 4, 7],
+        [0, 4, 3, 5],
+        [0, 2, 4, 3],  
     ]
     
 };
 /*-------------------------------------------------*/
-if( type == 1 && style == 1 && adaptivity == 1){
-    finishCash = calculate.cash[0][0] + calculate.cash[1][0] + calculate.cash[2][0];
-    finishDate = calculate.date[0][0] + calculate.date[1][0] + calculate.date[2][0];
+$('#type_c, #style_c, #adaptability_c, #cash_c').bind('input', calculater);
+function calculater(){
+    let type =0;
+    type =parseInt($("#type_c").val());
+    let style =0 ;
+    style =parseInt($("#style_c").val());
+    let adaptivity =0 ;
+    adaptivity =parseInt($("#adaptability_c").val());
+
+    let type_date = parseInt($("#type_c option:selected").attr('data'));
+    let style_date = parseInt($("#style_c option:selected").attr('data'));
+    let adaptivity_date = parseInt($("#adaptability_c option:selected").attr('data'));
+
+    finishCash = type + adaptivity + style; 
+    finishDate = type_date + style_date + adaptivity_date;
+
+    $("#date_c").val(finishDate);
+    $("#cash_c").val(finishCash);
+    console.log(type_date);
+    console.log($("#type_c").attr('data'));
+};
+
+//Анимация увиличения чисел
+const time = 1000;
+const step = 1;
+
+
+    function outNum(num, elem, pref) {
+        let e = document.querySelector(elem);
+        let n = 0;
+        let t = Math.round(time / (num / step));
+        let interval = setInterval(() => {
+          n = n + step;
+          if (n == num) {
+            clearInterval(interval);
+          }
+          e.innerHTML = n + pref;
+        }, t);
+      }
+
+
+
+
+// функция возвращает cookie с именем name, если есть, если нет, то undefined    
+function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
 }
-if( type == 1 && style == 2 && adaptivity == 1){
-    finishCash = calculate.cash[0][0] + calculate.cash[1][1] + calculate.cash[2][0];
-    finishDate = calculate.date[0][0] + calculate.date[1][1] + calculate.date[2][0];
-}
-if( type == 1 && style == 3 && adaptivity == 1){
-    finishCash = calculate.cash[0][0] + calculate.cash[1][2] + calculate.cash[2][0];
-    finishDate = calculate.date[0][0] + calculate.date[1][2] + calculate.date[2][0];
-}
-/*-------------------------------------------------*/
-if( type == 2 && style == 1 && adaptivity == 1){
-    finishCash = calculate.cash[0][1] + calculate.cash[1][0] + calculate.cash[2][0];
-    finishDate = calculate.date[0][1] + calculate.date[1][0] + calculate.date[2][0];
-}
-if( type == 3 && style == 1 && adaptivity == 1){
-    finishCash = calculate.cash[0][2] + calculate.cash[1][2] + calculate.cash[2][0];
-    finishDate = calculate.date[0][2] + calculate.date[1][0] + calculate.date[2][0];
-}
-/*-------------------------------------------------*/
-if( type == 1 && style == 1 && adaptivity == 2){
-    finishCash = calculate.cash[0][0] + calculate.cash[1][0] + calculate.cash[2][1];
-    finishDate = calculate.date[0][0] + calculate.date[1][0] + calculate.date[2][1];
-}
-if( type == 1 && style == 1 && adaptivity == 3){
-    finishCash = calculate.cash[0][0] + calculate.cash[1][2] + calculate.cash[2][2];
-    finishDate = calculate.date[0][0] + calculate.date[1][2] + calculate.date[2][2];
-}
-/*-------------------------------------------------*/
-if( type == 2 && style == 2 && adaptivity == 2){
-    finishCash = calculate.cash[0][1] + calculate.cash[1][1] + calculate.cash[2][1];
-    finishDate = calculate.date[0][1] + calculate.date[1][1] + calculate.date[2][1];
-}
-if( type == 3 && style == 3 && adaptivity == 3){
-    finishCash = calculate.cash[0][2] + calculate.cash[1][2] + calculate.cash[2][2];
-    finishDate = calculate.date[0][2] + calculate.date[1][2] + calculate.date[2][2];
-}
-/*-------------------------------------------------*/
-if( type == 2 && style == 1 && adaptivity == 2){
-    finishCash = calculate.cash[0][1] + calculate.cash[1][0] + calculate.cash[2][1];
-    finishDate = calculate.date[0][1] + calculate.date[1][0] + calculate.date[2][1];
-}
-if( type == 3 && style == 1 && adaptivity == 3){
-    finishCash = calculate.cash[0][2] + calculate.cash[1][0] + calculate.cash[2][2];
-    finishDate = calculate.date[0][2] + calculate.date[1][0] + calculate.date[2][2];
-}
-/*-------------------------------------------------*/
-if( type == 2 && style == 2 && adaptivity == 1){
-    finishCash = calculate.cash[0][1] + calculate.cash[1][1] + calculate.cash[2][0];
-    finishDate = calculate.date[0][1] + calculate.date[1][1] + calculate.date[2][0];
-}
-if( type == 3 && style == 3 && adaptivity == 1){
-    finishCash = calculate.cash[0][2] + calculate.cash[1][2] + calculate.cash[2][0];
-    finishDate = calculate.date[0][2] + calculate.date[1][2] + calculate.date[2][0];
-}
-/*-------------------------------------------------*/
-if( type == 1 && style == 2 && adaptivity == 3){
-    finishCash = calculate.cash[0][0] + calculate.cash[1][1] + calculate.cash[2][2];
-    finishDate = calculate.date[0][0] + calculate.date[1][1] + calculate.date[2][2];
-}
-if( type == 3 && style == 2 && adaptivity == 1){
-    finishCash = calculate.cash[0][2] + calculate.cash[1][1] + calculate.cash[2][0];
-    finishDate = calculate.date[0][2] + calculate.date[1][1] + calculate.date[2][0];
-}
-/*-------------------------------------------------*/
-if( type == 1 && style == 3 && adaptivity == 2){
-    finishCash = calculate.cash[0][0] + calculate.cash[1][2] + calculate.cash[2][1];
-    finishDate = calculate.date[0][0] + calculate.date[1][2] + calculate.date[2][1];
-}
-if( type == 3 && style == 1 && adaptivity == 2){
-    finishCash = calculate.cash[0][2] + calculate.cash[1][0] + calculate.cash[2][1];
-    finishDate = calculate.date[0][2] + calculate.date[1][0] + calculate.date[2][1];
-}
-/*-------------------------------------------------*/
-if( type == 2 && style == 3 && adaptivity == 1){
-    finishCash = calculate.cash[0][1] + calculate.cash[1][2] + calculate.cash[2][0];
-    finishDate = calculate.date[0][1] + calculate.date[1][2] + calculate.date[2][0];
-}
-if( type == 2 && style == 1 && adaptivity == 3){
-    finishCash = calculate.cash[0][1] + calculate.cash[1][0] + calculate.cash[2][2];
-    finishDate = calculate.date[0][1] + calculate.date[1][0] + calculate.date[2][2];
+// проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+var alertwin = getCookie("alertwin");
+if (alertwin != "no") { 
+    $(document).mouseleave(function(e){
+        if (e.clientY < 10) {
+            $(".exitblock").fadeIn("fast");    
+            $('#about, #skills, #case, #main, #calculator, #statistics, #reviews, #contact, #map, #footer, #header').css({ opacity: 0.2 });
+            // записываем cookie на 1 день, с которой мы не показываем окно
+            var date = new Date;
+            date.setDate(date.getDate() + 1);    
+            document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();       
+        }    
+    });
+    $(document).click(function(e) {
+        if (($(".exitblock").is(':visible')) && (!$(e.target).closest(".exitblock .mess").length)) {
+            $(".exitblock").remove();
+            $('#about, #skills, #case, #main, #calculator, #statistics, #reviews, #contact, #map, #footer, #header').css({ opacity: 1 });
+        }
+    });  
 }
 
-alert("Стоимость " + finishCash + " рублей, сроки " + finishDate + " дней");
+
+    $(window).scroll(() => {
+        let scrollDistance = $(window).scrollTop();
+    
+        $('.section').each((i, el) => {
+            if($(el).offset().top - $('.menu').outerHeight(true) <= scrollDistance){
+                $('.menu li').each((i, el) => {
+                    if ($(el).hasClass('active')){
+                        $(el).removeClass('active');
+                    }
+                });
+                $('.menu a:eq('+ i +')').find('li').addClass('active');
+            }
+        });
+    });
+
+    
+//------------------------------------------------------------------------------------Срабатывание анимации, когда элемент виден
+
+let anim_stop_bool = true;
+
+function anim_stop(){
+    anim_stop_bool = false
+}
+
+function scroll_animate(){
+    $(window).scroll(() => {
+        let box_information = $('#statistics').offset().top - $('.case').outerHeight(true);
+        let box_information2 = $('#statistics').offset().top + $('.case').outerHeight(true);
+        let scrollDistance = $(window).scrollTop();
+        let a = 0;
+
+            if(scrollDistance >= 4000 && anim_stop_bool == true) {   
+                outNum(120, '.clients_c', "");
+                outNum(5, '.hourse_c', "K");
+                outNum(340, '.projects_c', "");
+                outNum(23, '.rewerd_c', "");     
+                anim_stop()
+                
+            };  
+        console.log($('#statistics').offset().top - $('.case').outerHeight(true) + '  ' + scrollDistance + '  ' + $('#statistics').offset().top + $('.case').outerHeight(true));
+    });    
+};
+scroll_animate()
+});
+
+
